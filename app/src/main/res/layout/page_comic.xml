@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pagecomic.PageComic"
+
+    android:orientation="vertical">
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/progress_load_comic"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/nav_comic"
+        android:id="@+id/recycler_page_comic"
+        tools:itemCount="0"/>
+    <RelativeLayout
+        android:id="@+id/nav_comic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/baseline_navigate_before_24"
+            android:id="@+id/previous_comic"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/spinner_chapters"
+            android:layout_toEndOf="@+id/previous_comic"
+            android:layout_toStartOf="@+id/next_comic"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_navigate_next_24"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/next_comic"/>
+    </RelativeLayout>
+</RelativeLayout>

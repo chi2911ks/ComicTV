@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".comicinfo.ComicInfo">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/progress_info"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/info_comic"
+            android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/info">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:padding="10dp"
+                    android:id="@+id/title_comic"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="Phòng thủ hầm ngục"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/image_comic"
+                    android:layout_below="@+id/title_comic"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_comic"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/image_comic">
+                    <TextView
+                        android:id="@+id/other_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Tên khác: Bú cu thần chưởng" />
+                    <TextView
+                        android:id="@+id/name_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/other_name"
+                        android:layout_marginBottom="10dp"
+                        android:text="Tác giả: Đang cập nhật" />
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name_author"
+                        android:layout_marginBottom="10dp"
+                        android:text="Tình trạng: Đang tiến hành" />
+                    <TextView
+                        android:id="@+id/category_comic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/status"
+                        android:layout_marginBottom="10dp"
+                        android:text="Thể loại: Action - Adventure - Fantasy - Manhwa - Psychological - Tragedy - Truyện Màu" />
+                </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/info">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nd"
+                android:text="NỘI DUNG"
+                android:textSize="20dp"
+                android:textColor="#1979B8"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nd"
+                android:id="@+id/comic_content"
+                android:maxLines="2"
+                android:text="[ Được chuyển thể từ một trong những bộ tiểu thuyết kinh điển nhất mọi thời đại! ]
+Khi cha mẹ qua đời, cậu ta nhận ra mình có một tài sản thừa kế bí ẩn trị giá 500 triệu yên.
+Quyết định làm bất cứ điều gì mình thích kể từ đó trở đi, cậu ta bước vào trò chơi trực tuyến đầy thử thách nhất, “Đột Kích Hầm Ngục”, nơi cậu trở thành người đầu tiên đạt được thành tích đánh bại tất cả các Quỷ Vương. Tuy nhiên, khi trả lời một câu hỏi bí ẩn xuất hiện sau khi hoàn thành trò chơi, cậu đột nhiên thấy xuyên không vào thế giới trò chơi.
+Cậu ta đã tái sinh thành “Dantalian”, Quỷ Vương thấp hèn nhất và yếu nhất, xếp thứ 71 trong thế giới trò chơi! Không có gì ngoài ký ức về việc đánh bại Quỷ Vương mạnh nhất và tài hùng biện của mình, cậu ta chiến đấu để sinh tồn trong thế giới tàn bạo này - đây là câu chuyện về sự trở lại và báo thù"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/comic_content"
+                android:textColor="#3F51B5"
+                android:id="@+id/expandCollapse"
+                android:clickable="true"
+                android:text="Xem thêm >"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/linearlayoutBottom"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DANH SÁCH CHƯƠNG"
+                android:textSize="20dp"
+                android:textColor="#1979B8"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:background="@drawable/background_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recycler_chapter"
+                android:scrollbars="vertical"
+                android:scrollbarSize="10dp"
+                tools:itemCount="0"/>
+        </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
